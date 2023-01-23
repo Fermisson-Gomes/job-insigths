@@ -23,8 +23,9 @@ def get_min_salary(path: str) -> int:
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     if "min_salary" not in job or "max_salary" not in job:
         raise ValueError("min_salary or max_salary missing")
-    if not (isinstance(job["min_salary"], (int, float)) and
-    isinstance(job["min_salary"], (int, float))):
+    if not (
+        isinstance(job["min_salary"], (int, float)) and isinstance(job["min_salary"], (int, float))
+        ):
         raise ValueError("min_salary or max_salary is not a number")
     if job["min_salary"] > job["max_salary"]:
         raise ValueError("min_salary is greater than max_salary")
