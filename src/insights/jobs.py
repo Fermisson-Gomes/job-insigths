@@ -6,7 +6,7 @@ from typing import List, Dict
 @lru_cache
 def read(path: str) -> List[Dict]:
     with open(path, encoding="utf-8") as file:
-        reader=csv.DictReader(file)
+        reader = csv.DictReader(file)
         return list(reader)
 
     raise NotImplementedError
@@ -14,7 +14,7 @@ def read(path: str) -> List[Dict]:
 
 def get_unique_job_types(path: str) -> List[str]:
     data = read(path)
-    job_types=[job["job_type"] for job in data]
+    job_types = [job["job_type"] for job in data]
     return list(set(job_types))
     raise NotImplementedError
 

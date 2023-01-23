@@ -3,8 +3,8 @@ from src.insights.jobs import read
 
 
 def get_max_salary(path: str) -> int:
-    data=read(path)
-    max_salary=[
+    data = read(path)
+    max_salary = [
         int(job["max_salary"]) for job in data if job["max_salary"].isdigit()
         ]
     return int(max(max_salary))
@@ -12,8 +12,8 @@ def get_max_salary(path: str) -> int:
 
 
 def get_min_salary(path: str) -> int:
-    data=read(path)
-    min_salary=[
+    data = read(path)
+    min_salary = [
         int(job["min_salary"]) for job in data if job["min_salary"].isdigit()
         ]
     return int(min(min_salary))
