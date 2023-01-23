@@ -17,7 +17,6 @@ def get_min_salary(path: str) -> int:
         int(job["min_salary"]) for job in data if job["min_salary"].isdigit()
         ]
     return int(min(min_salary))
-    
     raise NotImplementedError
 
 
